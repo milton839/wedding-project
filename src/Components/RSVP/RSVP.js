@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import styles from "./RSVP.module.css";
+import TextField from "@mui/material/TextField";
+import { useState } from "react";
 
 const Rsvp = () => {
 	const [data, setData] = useState({
@@ -35,37 +34,6 @@ const Rsvp = () => {
 
 	return (
 		<div class="form">
-			{/* <form onSubmit={handleSubmit}>
-				<div className={styles.form}>
-					<input
-						type="text"
-						name="assistence"
-						value={assistence}
-						className={styles.formImput}
-						autoComplete="off"
-						onChange={handleChange}
-					/>
-					<label for="assistence" className={styles.formLabel}>
-						Podran asistir?
-					</label>
-				</div>
-				<div className={styles.form}>
-					<input
-						type="text"
-						name="email"
-						value={email}
-						class={styles.formImput}
-						autoComplete="off"
-						onChange={handleChange}
-					/>
-					<label for="assistence" className={styles.formLabel}>
-						Cuantos vendran?
-					</label>
-				</div>
-				<div>
-					<button className={styles.button}>Submit</button>
-				</div>
-			</form> */}
 			<form noValidate autoComplete="off" onSubmit={handleSubmit}>
 				<TextField
 					id="name"
@@ -75,6 +43,7 @@ const Rsvp = () => {
 						setData({ ...data, assistence: e.target.value });
 					}}
 					size="small"
+					style={{marginRight: '10px'}}
 				/>
 				<TextField
 					id="email"
@@ -85,13 +54,12 @@ const Rsvp = () => {
 					}}
 					size="small"
 				/>
-				<Button variant="text" color="primary" onClick={handleSubmit}>
+				<br />
+				<br />
+				<Button variant="text" style={{backgroundColor: "#1195F5", color:"white"}}  onClick={handleSubmit}>
 					Enviar
 				</Button>
 			</form>
-			<br />
-			<br />
-			<br />
 		</div>
 	);
 };

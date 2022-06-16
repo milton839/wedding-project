@@ -13,7 +13,13 @@ import MenuItem from "@mui/material/MenuItem";
 import Typography from "@mui/material/Typography";
 import ScrollToColor from "./ScrollToColor";
 
-const pages = ["Save the Date", "Fecha", "Lugar", "Confirmacion"];
+// const pages = ["Save the Date", "Fecha", "Lugar", "Confirmacion"];
+const pages = [
+	{menu:"Save the Date", id:"saveDate"},
+	{menu:"Fecha", id:"fecha"},
+	{menu:"Lugar", id:"lugar"},
+	{menu:"Confirmacion", id:"Confirmacion"},
+];
 
 const Navegation = () => {
 	const theme = createTheme();
@@ -78,8 +84,8 @@ const Navegation = () => {
 										}}
 									>
 										{pages.map((page) => (
-											<MenuItem key={page} onClick={handleCloseNavMenu}>
-												<Typography textAlign="center">{page}</Typography>
+											<MenuItem key={page.id} onClick={handleCloseNavMenu}>
+												<Typography textAlign="center">{page.menu}</Typography>
 											</MenuItem>
 										))}
 									</Menu>
@@ -95,12 +101,13 @@ const Navegation = () => {
 								</Typography>
 								<Box sx={{ flexGrow: 1,paddingLeft:'800px', display: { xs: "none", md: "flex" } }}>
 									{pages.map((page) => (
+										
 										<Button
-											key={page}
+											key={page.id}
 											onClick={handleCloseNavMenu}
 											sx={{ my: 2, color: "black", display: "block",font:"italic", fontSize: "14px", fontWeight: "bold" }}
 										>
-											{page}
+											<a href={`#${page.id}`} style={{textDecoration: "none", color:"black"}}>{page.menu}</a>
 										</Button>
 									))}
 								</Box>

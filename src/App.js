@@ -9,6 +9,7 @@ import SaveTheDate from "./Components/SaveTheDate";
 
 import { createTheme, ThemeProvider } from "@material-ui/core";
 import "./App.css";
+import Entrada from "./Components/Entrada";
 import Footer from "./Components/Footer";
 import TimeLine from "./Components/timeline";
 
@@ -30,9 +31,10 @@ class App extends Component {
 					<Navegation />
 					<SaveTheDate />
 					<Countdown deadline={this.state.deadline} />
+					<TimeLine />
 					<People />
 					<Cards />
-					<TimeLine />
+					<Entrada />
 					<Rsvp />
 					<Footer />
 				</div>
