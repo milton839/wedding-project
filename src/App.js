@@ -9,6 +9,7 @@ import SaveTheDate from "./Components/SaveTheDate";
 
 import { createTheme, ThemeProvider } from "@material-ui/core";
 import "./App.css";
+import Footer from "./Components/Footer";
 import TimeLine from "./Components/timeline";
 
 const theme = createTheme({
@@ -33,6 +34,7 @@ class App extends Component {
 					<Cards />
 					<TimeLine />
 					<Rsvp />
+					<Footer />
 				</div>
 			</ThemeProvider>
 		);

@@ -89,7 +89,7 @@ const Navegation = () => {
 									variant="h2"
 									noWrap
 									component="div"
-									sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
+									sx={{ flexGrow: 1,fontWeight: 'bold', display: { xs: "flex", md: "none" } }}
 								>
 									Brisia & Santiago
 								</Typography>
@@ -98,7 +98,7 @@ const Navegation = () => {
 										<Button
 											key={page}
 											onClick={handleCloseNavMenu}
-											sx={{ my: 2, color: "black", display: "block" }}
+											sx={{ my: 2, color: "black", display: "block",font:"italic", fontSize: "14px", fontWeight: "bold" }}
 										>
 											{page}
 										</Button>
