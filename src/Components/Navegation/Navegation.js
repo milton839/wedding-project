@@ -99,7 +99,7 @@ const Navegation = () => {
 								>
 									Brisia & Santiago
 								</Typography>
-								<Box sx={{ flexGrow: 1,paddingLeft:'800px', display: { xs: "none", md: "flex" } }}>
+								<Box sx={{ flexGrow: 1,paddingLeft:'600px', display: { xs: "none", md: "flex" } }}>
 									{pages.map((page) => (
 										
 										<Button
