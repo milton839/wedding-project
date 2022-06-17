@@ -13,7 +13,13 @@ import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 import ScrollToColor from './ScrollToColor';
 
-const pages = ['Save the Date', 'Fecha', 'Lugar', 'Confirmacion'];
+// const pages = ["Save the Date", "Fecha", "Lugar", "Confirmacion"];
+const pages = [
+	{menu:"Save the Date", id:"saveDate"},
+	{menu:"Fecha", id:"fecha"},
+	{menu:"Lugar", id:"lugar"},
+	{menu:"Confirmacion", id:"Confirmacion"},
+];
 
 const Navegation = () => {
    const theme = createTheme();
@@ -50,99 +56,70 @@ const Navegation = () => {
                            Brisia & Santiago
                         </Typography>
 
-                        <Box
-                           sx={{
-                              flexGrow: 1,
-                              display: { xs: 'flex', md: 'none' },
-                           }}
-                        >
-                           <IconButton
-                              size='large'
-                              aria-label='account of current user'
-                              aria-controls='menu-appbar'
-                              aria-haspopup='true'
-                              onClick={handleOpenNavMenu}
-                              color='inherit'
-                           >
-                              <MenuIcon />
-                           </IconButton>
-                           <Menu
-                              style={{}}
-                              id='menu-appbar'
-                              anchorEl={anchorElNav}
-                              anchorOrigin={{
-                                 vertical: 'bottom',
-                                 horizontal: 'right',
-                              }}
-                              keepMounted
-                              transformOrigin={{
-                                 vertical: 'top',
-                                 horizontal: 'right',
-                              }}
-                              open={Boolean(anchorElNav)}
-                              onClose={handleCloseNavMenu}
-                              sx={{
-                                 display: { xs: 'block', md: 'none' },
-                              }}
-                           >
-                              {pages.map((page) => (
-                                 <MenuItem
-                                    key={page}
-                                    onClick={handleCloseNavMenu}
-                                 >
-                                    <Typography
-                                       textAlign='center'
-                                       sx={{ px: 1 }}
-                                    >
-                                       {page}
-                                    </Typography>
-                                 </MenuItem>
-                              ))}
-                           </Menu>
-                        </Box>
-
-                        <Typography
-                           fontFamily='Tangerine'
-                           variant='h2'
-                           noWrap
-                           component='div'
-                           sx={{
-                              flexGrow: 1,
-                              display: { xs: 'flex', md: 'none' },
-                           }}
-                        >
-                           Brisia & Santiago
-                        </Typography>
-                        <Box
-                           sx={{
-                              flexGrow: 1,
-                              paddingLeft: '800px',
-                              display: { xs: 'none', md: 'flex' },
-                           }}
-                        >
-                           {pages.map((page) => (
-                              <Button
-                                 key={page}
-                                 onClick={handleCloseNavMenu}
-                                 sx={{
-                                    my: 2,
-                                    color: 'black',
-                                    display: 'block',
-                                 }}
-                              >
-                                 {page}
-                              </Button>
-                           ))}
-                           <Typography href='#timeline' component='a'>
-                              Timeline
-                           </Typography>
-                        </Box>
-                     </Box>
-                  </Container>
-               </AppBar>
-            </ScrollToColor>
-         </ThemeProvider>
-      </div>
-   );
+								<Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+									<IconButton
+										size="large"
+										aria-label="account of current user"
+										aria-controls="menu-appbar"
+										aria-haspopup="true"
+										onClick={handleOpenNavMenu}
+										color="inherit"
+									>
+										<MenuIcon />
+									</IconButton>
+									<Menu
+										style={{  }}
+										id="menu-appbar"
+										anchorEl={anchorElNav}
+										anchorOrigin={{
+											vertical: "bottom",
+											horizontal: "right",
+										}}
+										keepMounted
+										transformOrigin={{
+											vertical: "top",
+											horizontal: "right",
+										}}
+										open={Boolean(anchorElNav)}
+										onClose={handleCloseNavMenu}
+										sx={{
+											display: { xs: "block", md: "none" },
+										}}
+									>
+										{pages.map((page) => (
+											<MenuItem key={page.id} onClick={handleCloseNavMenu}>
+												<Typography textAlign="center">{page.menu}</Typography>
+											</MenuItem>
+										))}
+									</Menu>
+								</Box>
+								<Typography
+									fontFamily="Tangerine"
+									variant="h2"
+									noWrap
+									component="div"
+									sx={{ flexGrow: 1,fontWeight: 'bold', display: { xs: "flex", md: "none" } }}
+								>
+									Brisia & Santiago
+								</Typography>
+								<Box sx={{ flexGrow: 1,paddingLeft:'600px', display: { xs: "none", md: "flex" } }}>
+									{pages.map((page) => (
+										
+										<Button
+											key={page.id}
+											onClick={handleCloseNavMenu}
+											sx={{ my: 2, color: "black", display: "block",font:"italic", fontSize: "14px", fontWeight: "bold" }}
+										>
+											<a href={`#${page.id}`} style={{textDecoration: "none", color:"black"}}>{page.menu}</a>
+										</Button>
+									))}
+								</Box>
+							</Box>
+						</Container>
+					</AppBar>
+				</ScrollToColor>
+			</ThemeProvider>
+		</div>
+	);
 };
 export default Navegation;
