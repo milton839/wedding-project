@@ -1,5 +1,11 @@
+html {
+	scroll-behavior: smooth;
+	
+}
+
 .App {
 	text-align: center;
+	scroll-behavior: smooth;
 }
 .Grid {
 	margin-top: 10px;

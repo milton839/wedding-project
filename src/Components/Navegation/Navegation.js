@@ -13,7 +13,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Typography from "@mui/material/Typography";
 import ScrollToColor from "./ScrollToColor";
 
-const pages = ["Save the Date", "Fecha", "Lugar", "Confirmacion"];
+const pages = ["Save the Date", "Fecha", "Lugar", "Confirmacion", ];
 
 const Navegation = () => {
 	const theme = createTheme();
@@ -79,7 +79,7 @@ const Navegation = () => {
 									>
 										{pages.map((page) => (
 											<MenuItem key={page} onClick={handleCloseNavMenu}>
-												<Typography textAlign="center">{page}</Typography>
+												<Typography textAlign="center" sx={{px: 1}}>{page}</Typography>
 											</MenuItem>
 										))}
 									</Menu>
@@ -103,6 +103,7 @@ const Navegation = () => {
 											{page}
 										</Button>
 									))}
+									<Typography href='#timeline' component='a' >Timeline</Typography>
 								</Box>
 							</Box>
 						</Container>

@@ -9,7 +9,8 @@ import TimelineDot from '@mui/lab/TimelineDot';
 const Outline = styled(Box)(({ theme }) => ({
    position: 'relative',
    padding: '0.8rem',
-   maxWidth: '350px',
+   width: '100%',
+   maxWidth: '400px',
    border: '1px solid rgba(0, 0, 0, 0.05)',
    background: '#fafafa',
 }));
@@ -29,20 +30,31 @@ const Square = styled(Box)(({ reverse }) => ({
    transform: 'translateX(-50%) rotate(135deg)',
 }));
 
+const ContentBox = styled(Box)(({ theme, bgColor }) => ({
+   backgroundColor: bgColor,
+   padding: '2rem',
+   width: '100%',
+   height: '100%',
+   position: 'relative',
+   zIndex: 300,
+   textAlign: 'left',
+}));
+
 const TimeLine = () => {
    return (
-      <Box>
+      <Box id='timeline' sx={{ scrollPaddingTop: '5rem' }}>
          <Timeline position='alternate'>
             <TimelineItem>
                <TimelineSeparator>
                   <TimelineDot
                      sx={{
                         backgroundImage:
-                           'url("https://i.ibb.co/r0gHkvM/color-palette-1.png")',
+                           'url("https://i.ibb.co/kSmzjGJ/Screenshot-2022-06-17-112643.png")',
                         backgroundPosition: 'center',
                         backgroundSize: 'cover',
-                        height: '100px',
-                        width: '100px',
+                        height: '130px',
+                        width: '130px',
+                        boxShadow: '0',
                      }}
                   />
                   <TimelineConnector
@@ -56,16 +68,7 @@ const TimeLine = () => {
                <TimelineContent sx={{ marginTop: -5 }}>
                   <Outline>
                      <Square />
-                     <Box
-                        sx={{
-                           backgroundColor: '#f4f3e2',
-                           p: 3,
-                           width: '100%%',
-                           height: '100%',
-                           position: 'relative',
-                           zIndex: 300,
-                        }}
-                     >
+                     <ContentBox bgColor='#f4f3e2'>
                         <Box>
                            <Typography
                               variant='h5'
@@ -80,16 +83,22 @@ const TimeLine = () => {
                            <Typography
                               variant='body1'
                               sx={{
-                                 my: 2,
+                                 my: 3.5,
                                  textTransform: 'uppercase',
                                  color: 'rgb(127, 127, 127)',
+                                 fontSize: '12px',
+                                 letterSpacing: '0.1rem',
                               }}
                            >
                               DIECIOCHO HORAS
                            </Typography>
                            <Typography
                               variant='body1'
-                              sx={{ mb: 1, color: '#7f7f7f' }}
+                              sx={{
+                                 mb: 1,
+                                 color: '#7f7f7f',
+                                 fontWeight: 'bold',
+                              }}
                            >
                               Capilla San Pablo Apóstol
                            </Typography>
@@ -101,7 +110,7 @@ const TimeLine = () => {
                               P.M.
                            </Typography>
                         </Box>
-                     </Box>
+                     </ContentBox>
                   </Outline>
                </TimelineContent>
             </TimelineItem>
@@ -124,17 +133,7 @@ const TimeLine = () => {
                >
                   <Outline>
                      <Square reverse />
-                     <Box
-                        sx={{
-                           backgroundColor: '#fef6f8',
-                           p: 3,
-                           width: '100%%',
-                           height: '100%',
-                           position: 'relative',
-                           zIndex: 300,
-                           textAlign: 'left',
-                        }}
-                     >
+                     <ContentBox bgColor='#fef6f8'>
                         <Box>
                            <Typography
                               variant='h5'
@@ -144,48 +143,140 @@ const TimeLine = () => {
                                  fontSize: '2rem',
                               }}
                            >
-                              Ceremonia Religiosa
+                              Ceremonia Civil
                            </Typography>
                            <Typography
                               variant='body1'
                               sx={{
-                                 my: 2,
+                                 my: 3.5,
                                  textTransform: 'uppercase',
                                  color: 'rgb(127, 127, 127)',
+                                 fontSize: '12px',
+                                 letterSpacing: '0.1rem',
                               }}
                            >
                               DIECIOCHO HORAS
                            </Typography>
-                           <Typography
-                              variant='body1'
-                              sx={{ mb: 1, color: '#7f7f7f' }}
-                           >
-                              Capilla San Pablo Apóstol
-                           </Typography>
+
                            <Typography
                               variant='body1'
                               sx={{ color: '#7f7f7f' }}
                            >
-                              Habrá camiones que saldrán del hotel a las 5:50
-                              P.M.
+                              Playa privada Live Aqua Beach Resort Cancún,
+                              Cancún.
                            </Typography>
                         </Box>
-                     </Box>
+                     </ContentBox>
                   </Outline>
                </TimelineContent>
             </TimelineItem>
             <TimelineItem>
                <TimelineSeparator>
-                  <TimelineDot />
+                  <TimelineDot
+                     sx={{
+                        backgroundImage:
+                           'url("https://i.ibb.co/r0gHkvM/color-palette-1.png")',
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        height: '100px',
+                        width: '100px',
+                     }}
+                  />
                   <TimelineConnector />
                </TimelineSeparator>
-               <TimelineContent>Sleep</TimelineContent>
+               <TimelineContent>
+                  <Outline>
+                     <Square />
+                     <ContentBox bgColor='#f4f3e2'>
+                        <Box>
+                           <Typography
+                              variant='h5'
+                              color='#FF847C'
+                              sx={{
+                                 fontFamily: "'Parisienne', cursive",
+                                 fontSize: '2rem',
+                              }}
+                           >
+                              Recepción
+                           </Typography>
+                           <Typography
+                              variant='body1'
+                              sx={{
+                                 my: 3.5,
+                                 textTransform: 'uppercase',
+                                 color: 'rgb(127, 127, 127)',
+                                 fontSize: '12px',
+                                 letterSpacing: '0.1rem',
+                              }}
+                           >
+                              VEINTE HORAS
+                           </Typography>
+
+                           <Typography
+                              variant='body1'
+                              sx={{ color: '#7f7f7f' }}
+                           >
+                              Live Aqua Beach Resort Cancún, Cancún.
+                           </Typography>
+                        </Box>
+                     </ContentBox>
+                  </Outline>
+               </TimelineContent>
             </TimelineItem>
             <TimelineItem>
                <TimelineSeparator>
-                  <TimelineDot />
+                  <TimelineDot
+                     sx={{
+                        backgroundImage:
+                           'url("https://i.ibb.co/r0gHkvM/color-palette-1.png")',
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        height: '100px',
+                        width: '100px',
+                     }}
+                  />
+                  <TimelineConnector />
                </TimelineSeparator>
-               <TimelineContent>Repeat</TimelineContent>
+               <TimelineContent
+                  sx={{ display: 'flex', justifyContent: 'flex-end' }}
+               >
+                  <Outline>
+                     <Square reverse />
+                     <ContentBox bgColor='#fef6f8'>
+                        <Box>
+                           <Typography
+                              variant='h5'
+                              color='#FF847C'
+                              sx={{
+                                 fontFamily: "'Parisienne', cursive",
+                                 fontSize: '2rem',
+                              }}
+                           >
+                              After Party
+                           </Typography>
+                           <Typography
+                              variant='body1'
+                              sx={{
+                                 my: 3.5,
+                                 textTransform: 'uppercase',
+                                 color: 'rgb(127, 127, 127)',
+                                 fontSize: '12px',
+                                 letterSpacing: '0.1rem',
+                              }}
+                           >
+                              UNA HORAS
+                           </Typography>
+
+                           <Typography
+                              variant='body1'
+                              sx={{ color: '#7f7f7f' }}
+                           >
+                              Club Heaven
+                           </Typography>
+                        </Box>
+                     </ContentBox>
+                  </Outline>
+               </TimelineContent>
             </TimelineItem>
          </Timeline>
       </Box>
