@@ -1,4 +1,4 @@
-import { Box, styled, Typography } from '@mui/material';
+import { Box, styled, Typography, useMediaQuery } from '@mui/material';
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
@@ -41,8 +41,19 @@ const ContentBox = styled(Box)(({ theme, bgColor }) => ({
 }));
 
 const TimeLine = () => {
+   console.log(true);
    return (
-      <Box id='timeline' sx={{ scrollPaddingTop: '5rem' }}>
+      <Box id='fecha' sx={{ pt: '3.5rem' }}>
+         <Typography
+            sx={{
+               fontFamily: "'Parisienne', cursive",
+               fontSize: '5rem',
+               color: '#FF847C',
+               mb: 6,
+            }}
+         >
+            Timeline
+         </Typography>
          <Timeline position='alternate'>
             <TimelineItem>
                <TimelineSeparator>
@@ -52,8 +63,14 @@ const TimeLine = () => {
                            'url("https://i.ibb.co/kSmzjGJ/Screenshot-2022-06-17-112643.png")',
                         backgroundPosition: 'center',
                         backgroundSize: 'cover',
-                        height: '130px',
-                        width: '130px',
+                        height: {
+                           xs: '80px',
+                           md: '130px',
+                        },
+                        width: {
+                           xs: '80px',
+                           md: '130px',
+                        },
                         boxShadow: '0',
                      }}
                   />
@@ -122,11 +139,23 @@ const TimeLine = () => {
                            'url("https://i.ibb.co/r0gHkvM/color-palette-1.png")',
                         backgroundPosition: 'center',
                         backgroundSize: 'cover',
-                        height: '100px',
-                        width: '100px',
+                        height: {
+                           xs: '80px',
+                           md: '130px',
+                        },
+                        width: {
+                           xs: '80px',
+                           md: '130px',
+                        },
                      }}
                   />
-                  <TimelineConnector />
+                  <TimelineConnector
+                     sx={{
+                        height: '130px',
+                        width: 0,
+                        border: '1px dashed #ffeded',
+                     }}
+                  />
                </TimelineSeparator>
                <TimelineContent
                   sx={{ display: 'flex', justifyContent: 'flex-end' }}
@@ -182,7 +211,13 @@ const TimeLine = () => {
                         width: '100px',
                      }}
                   />
-                  <TimelineConnector />
+                  <TimelineConnector
+                     sx={{
+                        height: '130px',
+                        width: 0,
+                        border: '1px dashed #ffeded',
+                     }}
+                  />
                </TimelineSeparator>
                <TimelineContent>
                   <Outline>
@@ -235,7 +270,13 @@ const TimeLine = () => {
                         width: '100px',
                      }}
                   />
-                  <TimelineConnector />
+                  <TimelineConnector
+                     sx={{
+                        height: '130px',
+                        width: 0,
+                        border: '1px dashed #ffeded',
+                     }}
+                  />
                </TimelineSeparator>
                <TimelineContent
                   sx={{ display: 'flex', justifyContent: 'flex-end' }}
