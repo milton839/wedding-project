@@ -34,6 +34,7 @@ class App extends Component {
 					<TimeLine />
 					<People />
 					<Cards />
+					<Entrada />
 					<Rsvp />
 					<Footer />
 				</div>
