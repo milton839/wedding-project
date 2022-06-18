@@ -39,7 +39,7 @@ const People = () => {
 
       </Icon> */}
 			<br />
-			<Typography variant="h3">
+			<Typography variant="h4">
 				Juana Yañez Olea
 				<br />
 				&
@@ -51,7 +51,7 @@ const People = () => {
 
       </Icon> */}
 			<br />
-			<Typography variant="h3">
+			<Typography variant="h4">
 				Maria de Jesus Hernandez Mendez
 				<br />
 				&
@@ -63,6 +63,8 @@ const People = () => {
 				En Compania de nuestros padrinos
 				<br />
 				<br />
+			</Typography>
+			<Typography variant="h4">
 				Patricia Adela Hernandez Mendez
 				<br />
 				&
