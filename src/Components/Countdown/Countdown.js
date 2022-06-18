@@ -33,12 +33,7 @@ class Countdown extends Component {
 	render() {
 		return (
 			<div>
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
+				
 				<br />
 				<br />
 				<br />
@@ -66,17 +61,7 @@ class Countdown extends Component {
 				<br />
 				<br />
 				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
+			
 			</div>
 		);
 	}
