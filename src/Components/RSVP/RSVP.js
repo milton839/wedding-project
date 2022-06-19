@@ -1,7 +1,5 @@
-import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
 import { useState } from "react";
-
+import background from "../../Images/foto1.jpg";
 const Rsvp = () => {
 	const [data, setData] = useState({
 		assistence: "",
@@ -33,33 +31,74 @@ const Rsvp = () => {
 	};
 
 	return (
-		<div class="form" id="Confirmacion">
-			<form noValidate autoComplete="off" onSubmit={handleSubmit}>
-				<TextField
-					id="name"
-					name="assistence"
-					label="Podran asistir?"
-					onChange={(e) => {
-						setData({ ...data, assistence: e.target.value });
-					}}
-					size="small"
-					style={{marginRight: '10px'}}
-				/>
-				<TextField
-					id="email"
-					name="email"
-					label="Preguntas o Comentarios"
-					onChange={(e) => {
-						setData({ ...data, email: e.target.value });
-					}}
-					size="small"
-				/>
-				<br />
-				<br />
-				<Button variant="text" style={{backgroundColor: "#1195F5", color:"white"}}  onClick={handleSubmit}>
-					Enviar
-				</Button>
-			</form>
+		<div className="form" id="Confirmacion" style={{
+			backgroundImage: `linear-gradient(to right, rgba(140, 140, 140, 0.4), rgba(140, 140, 140, 0.4)),url(${background})`,
+			padding: "300px 0 300px 0",
+			filter: "grayscale(1)",
+			backgroundPosition: "center",
+			}}>
+				<div>
+					<h1 fontFamily="Tangerine">RSVP</h1>
+					<p>¡Queremos compartir este momento tan esperado contigo!</p>
+					<p>Por favor ayúdanos confirmando tu asistencia.</p>
+					<p>- No niños -</p>
+				</div>
+				<div className="d-flex justify-content-center">
+					<form noValidate autoComplete="off" onSubmit={handleSubmit} className="">
+						<div className="d-flex justify-content-center">
+							<div className="mr-5" style={{marginRight: '10px'}}>
+								<input
+									id="name"
+									className="form-control" style={{width:"300px"}}
+									name="assistence"
+									placeholder="Podran asistir?"
+									onChange={(e) => {
+										setData({ ...data, assistence: e.target.value });
+									}}
+									size="small"
+								/>
+								<input
+									id="email"
+									className="form-control mt-3" style={{width:"300px"}}
+									name="email"
+									placeholder="Preguntas o Comentarios"
+									onChange={(e) => {
+										setData({ ...data, email: e.target.value });
+									}}
+									size="small"
+								/>
+							</div>
+							<div className="ml-5">
+								<input
+									id="name"
+									className="form-control" style={{width:"300px"}}
+									name="assistence"
+									placeholder="Podran asistir?"
+									onChange={(e) => {
+										setData({ ...data, assistence: e.target.value });
+									}}
+									size="small"
+								/>
+								<input
+									id="email"
+									className="form-control mt-3" style={{width:"300px"}}
+									name="email"
+									placeholder="Preguntas o Comentarios"
+									onChange={(e) => {
+										setData({ ...data, email: e.target.value });
+									}}
+									size="small"
+								/>
+							</div>
+						</div>
+						<br />
+						<br />
+						<button variant="text" className="form-control btn btn-danger" style={{width:"300px"}}  onClick={handleSubmit}>
+							Enviar
+						</button>
+					</form>
+				</div>
+			
 		</div>
 	);
 };

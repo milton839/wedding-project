@@ -1,5 +1,5 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Component } from "react";
-
 import Cards from "./Components/Cards/Cards";
 import Countdown from "./Components/Countdown/Countdown";
 import Navegation from "./Components/Navegation/Navegation";
