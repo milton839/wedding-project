@@ -31,12 +31,10 @@ class App extends Component {
 					<Navegation />
 					<SaveTheDate />
 					<Countdown deadline={this.state.deadline} />
-					<TimeLine />
 					<People />
 					<Cards />
-					<Entrada />
+					<TimeLine />
 					<Rsvp />
-					<Footer />
 				</div>
 			</ThemeProvider>
 		);
